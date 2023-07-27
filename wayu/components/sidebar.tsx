@@ -5,7 +5,7 @@ import Image from "next/image"
 
 import { Montserrat } from "next/font/google"
 import { cn } from "@/lib/utils"
-import { LayoutDashboard } from "lucide-react"
+import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react"
 
 type sidebarProps = {
     
@@ -23,6 +23,42 @@ const routes = [
         href: "/dashboard",
         color: "text-sky-500",
     },
+    {
+        label: "Conversation",
+        icon: MessageSquare,
+        href: "/conversation",
+        color: "text-violet-500",
+    },
+    {
+        label: "Image Generation",
+        icon: ImageIcon,
+        href: "/image",
+        color: "text-pink-700",
+    },
+    {
+        label: "Video Generation",
+        icon: VideoIcon,
+        href: "/video",
+        color: "text-orange-700",
+    },
+    {
+        label: "Music Generation",
+        icon: Music,
+        href: "/music",
+        color: "text-emerald-500",
+    },
+    {
+        label: "Code Generation",
+        icon: Code,
+        href: "/code",
+        color: "text-green-700",
+    },
+    {
+        label: "Settings",
+        icon: Settings,
+        href: "/settings",
+    },
+    
 ]
 
 const Sidebar:React.FC<sidebarProps> = () => {
@@ -36,7 +72,7 @@ const Sidebar:React.FC<sidebarProps> = () => {
                     href="/dashboard"
                     className="flex items-center pl-3 mb-14"
                 >
-                    <div className="relative w-8 h-8 mr-4">
+                    <div className="relative w-8 h-8 mr-4 rounded-lg">
                         <Image src="/logo-r.png" fill alt="logo"/>
                     </div>
                     <h1 className={cn("text-2xl font-bold", montserrat.className)}>wayu</h1>
