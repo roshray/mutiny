@@ -2,10 +2,20 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname} from "next/navigation"
 
 import { Montserrat } from "next/font/google"
 import { cn } from "@/lib/utils"
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react"
+
+import { 
+    Code, 
+    ImageIcon, 
+    LayoutDashboard, 
+    MessageSquare, 
+    Music, 
+    Settings, 
+    VideoIcon 
+} from "lucide-react"
 
 type sidebarProps = {
     
@@ -13,7 +23,7 @@ type sidebarProps = {
 
 const montserrat = Montserrat({ 
     weight: "600", 
-    subsets: ["latin"]
+    subsets: ["latin"],
 })
 
 const routes = [
@@ -62,6 +72,8 @@ const routes = [
 ]
 
 const Sidebar:React.FC<sidebarProps> = () => {
+
+    const pathname = usePathname()
     
     return (
         <div 
@@ -73,7 +85,7 @@ const Sidebar:React.FC<sidebarProps> = () => {
                     className="flex items-center pl-3 mb-14"
                 >
                     <div className="relative w-8 h-8 mr-4 rounded-lg">
-                        <Image src="/logo-r.png" fill alt="logo"/>
+                        <Image src="/logo.png" fill alt="logo"/>
                     </div>
                     <h1 className={cn("text-2xl font-bold", montserrat.className)}>wayu</h1>
                 </Link>
@@ -83,7 +95,9 @@ const Sidebar:React.FC<sidebarProps> = () => {
                         
                             href={route.href}
                             key={route.href}
-                            className="text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition"
+                            className={cn("text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
+                            pathname === route.href ? "text-white bg-white/10" : "text-zinc-400"
+                            )}
                         >
                             <div className="flex items-center flex-1">
                                 <route.icon 
@@ -93,7 +107,6 @@ const Sidebar:React.FC<sidebarProps> = () => {
                                 />
                                 {route.label}
                             </div>
-
                         </Link>
                     ))}
                 </div>
