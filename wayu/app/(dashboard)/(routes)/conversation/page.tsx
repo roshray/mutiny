@@ -1,5 +1,5 @@
-import Heading from '@/components/heading';
-import { MessageSquare } from 'lucide-react';
+import Heading from '@/components/heading'
+import { MessageSquare } from 'lucide-react'
 
 
 const ConversationPage = () => {
@@ -13,7 +13,9 @@ const ConversationPage = () => {
                 iconColor="text-violet-500"
                 bgColor="bg-violet-500/10"
             />
+            <div className=""></div>
         </div>
     )
 }
-export default ConversationPage;
+
+export default ConversationPage
