@@ -6,7 +6,7 @@ import axios from "axios"
 
 import * as z from "zod"
 
-import { Music, VideoIcon } from 'lucide-react'
+import { VideoIcon } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { formSchema } from './constants'
 import { zodResolver} from "@hookform/resolvers/zod"
@@ -104,7 +104,7 @@ const VideoPage = () => {
                     )}
 
                     {!video && !isLoading && (
-                        <Empty label="No musics generated."/>
+                        <Empty label="No video generated."/>
                     )}
                     
                     <video className="w-full aspect-video mt-8 rounded-lg border bg-black" controls>
