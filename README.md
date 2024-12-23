@@ -172,8 +172,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/rosh_ray_) - 97rayroshan@gmail.com
-
 Project Link: [https://github.com/roshray/mutiny](https://github.com/roshray/mutiny)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -185,7 +183,7 @@ Project Link: [https://github.com/roshray/mutiny](https://github.com/roshray/mut
 
 * [Freecodecamp](https://freecodecamp.com)
 * [Youtube](https://youtube.com)
-* [Open AI](https://openai.com)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
